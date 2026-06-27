@@ -1,5 +1,6 @@
 ﻿using Microsoft.VisualBasic.Devices;
 using Org.BouncyCastle.Ocsp;
+using System.ComponentModel.Design;
 using System.Text.Json;
 using System.Text.RegularExpressions;
 
@@ -13,6 +14,7 @@ namespace VP_Project
         {
             InitializeComponent();
             ClickedONPanel = false;
+            foreach (Owner o in UtilityClass.Owners) ownerSelect.Items.Add(o.Name);
         }
 
         private void SaveFile()
@@ -20,35 +22,26 @@ namespace VP_Project
             Registration reg = new Registration();
             if (!UtilityClass.DoesRegExist(WriteReg.Text))
             {
-                reg = new Registration(WriteReg.Text, Model.Text, OwnerNameBox.Text);
+                if (ownerSelect.SelectedIndex != -1)
+                {
+                    Owner o = UtilityClass.GetOwner(ownerSelect.Text);
+                    reg = new Registration(WriteReg.Text, Model.Text, o);
+                }
+                else reg = new Registration(WriteReg.Text, Model.Text, new Owner());
             }
             else
             {
                 reg = UtilityClass.GetRegistration(WriteReg.Text);
             }
             reg.AddComment(new InfoText(WriteInfo.Text, DateTime.Now, (int)Kilometers.Value));
-            UtilityClass.Serialize(reg);
+            UtilityClass.Serialize<Registration>(reg, reg.Name);
         }
 
         private void WriteReg_TextChanged(object sender, EventArgs e)
         {
-            AllowAlphabetLettersOnly(WriteReg);            
+            UtilityClass.AllowAlphabetLettersOnly(WriteReg);
         }
-        private void AllowAlphabetLettersOnly(TextBox TB)
-        {
-            int caretpos = TB.SelectionStart;
-            if (!String.IsNullOrWhiteSpace(TB.Text))
-            {
-                foreach (char c in TB.Text.ToCharArray())
-                {
-                    if (!System.Text.RegularExpressions.Regex.IsMatch(c.ToString(), @"^[a-zA-Z0-9 ]+$"))
-                    {
-                        TB.Text = TB.Text.Replace(c.ToString(), "");
-                        TB.SelectionStart = caretpos - 1;
-                    }
-                }
-            }
-        }        
+
 
         //BUTTONS
 
@@ -129,12 +122,12 @@ namespace VP_Project
         //OTHER
 
         private void NewEntryForm_FormClosing(object sender, FormClosingEventArgs e)
-        {            
-            if (!(String.IsNullOrWhiteSpace(WriteInfo.Text) 
-                && Kilometers.Value == 0 
-                && String.IsNullOrWhiteSpace(WriteReg.Text) 
-                && String.IsNullOrWhiteSpace(Model.Text) 
-                && String.IsNullOrWhiteSpace(OwnerNameBox.Text)))
+        {
+            if (!(String.IsNullOrWhiteSpace(WriteInfo.Text)
+                && Kilometers.Value == 0
+                && String.IsNullOrWhiteSpace(WriteReg.Text)
+                && String.IsNullOrWhiteSpace(Model.Text)
+                && ownerSelect.SelectedIndex == -1))
             {
                 if (e.CloseReason == CloseReason.UserClosing && DialogResult != DialogResult.OK)
                     e.Cancel = MessageBox.Show("Имате незачувани податоци. Дали сакате да откажете?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) == DialogResult.No;
@@ -158,17 +151,28 @@ namespace VP_Project
             {
                 Registration reg = UtilityClass.GetRegistration(WriteReg.Text);
                 Model.Text = reg.CarModel;
-                OwnerNameBox.Text = reg.Owner;
+                ownerSelect.Text = reg.Owner.Name;
                 Model.Enabled = false;
-                OwnerNameBox.Enabled = false;
+                ownerSelect.Enabled = false;
             }
             else
             {
                 Model.Clear();
-                OwnerNameBox.Clear();
+                ownerSelect.SelectedIndex = -1;
                 Model.Enabled = true;
-                OwnerNameBox.Enabled = true;
+                ownerSelect.Enabled = true;
             }
+        }
+
+        private void ownerSelect_DrawItem(object sender, DrawItemEventArgs e)
+        {
+            if (e.Index < 0) return;
+
+            if ((e.State & DrawItemState.Selected) == DrawItemState.Selected)
+                e = new DrawItemEventArgs(e.Graphics, e.Font, e.Bounds, e.Index, e.State ^ DrawItemState.Selected, e.ForeColor, Color.FromArgb(255, 79, 88, 117));
+            e.DrawBackground();
+            e.Graphics.DrawString(ownerSelect.Items[e.Index].ToString(), e.Font, Brushes.White, e.Bounds, StringFormat.GenericDefault);
+            e.DrawFocusRectangle();
         }
     }
 }

@@ -7,18 +7,18 @@ namespace VP_Project
     [Serializable]
     public class Registration
     {
-        public string Name {  get; set; }
+        public string Name { get; set; }
         public string CarModel { get; set; }
-        public string Owner {  get; set; }
-        public List<InfoText> Info {  get; set; }
+        public Owner Owner { get; set; }
+        public List<InfoText> Info { get; set; }
         public Registration() 
         {
             Name = "";
             CarModel = "";
-            Owner = "";
+            Owner = new Owner();
             Info = new List<InfoText>();
         }
-        public Registration(string name, string carModel, string owner)
+        public Registration(string name, string carModel, Owner owner)
         {
             Name = name;
             CarModel = carModel;
@@ -36,7 +36,7 @@ namespace VP_Project
         public override string ToString()
         {
             StringBuilder ret = new StringBuilder();
-            ret.AppendLine("Сопственик: " + Owner);
+            ret.AppendLine("Сопственик: " + Owner.Name);
             ret.AppendLine("Модел на возило: " + CarModel);
             ret.AppendLine();
             foreach(var info in Info)

@@ -1,6 +1,8 @@
 ﻿using Org.BouncyCastle.Ocsp;
+using System.Text;
 using System.Text.Json;
 using System.Text.RegularExpressions;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace VP_Project
 {
@@ -8,20 +10,33 @@ namespace VP_Project
     {
         Point mouse;
         bool ClickedONPanel;
-
+        bool ButtonsToggle;
+        public enum Mode { RegMode, OwnerMode }
+        public static Mode mod;
         public Form1()
         {
             InitializeComponent();
             ClickedONPanel = false;
+            displayMode.Items.Add("Регистрација");
+            displayMode.Items.Add("Сопственик");
+            displayMode.SelectedIndex = 0;
+            mod = Mode.RegMode;
         }
-
-        private bool ButtonsToggle { get; set; }
 
         public void TextReader()
         {
-            Registration reg = UtilityClass.Deserialize(UtilityClass.BaseFolder + RegList.Text + ".json");
-            InfoBox.Text = reg.ToString();
-            RegNameBox.Text = reg.Name;
+            if(mod == Mode.RegMode)
+            {
+                Registration reg = UtilityClass.GetRegistration(RegList.Text);
+                InfoBox.Text = reg.ToString();
+                RegNameBox.Text = reg.Name;
+            }
+            else if(mod == Mode.OwnerMode)
+            {
+                Owner o = UtilityClass.GetOwner(RegList.Text);
+                InfoBox.Text = o.ToString();
+                RegNameBox.Text = o.Name;
+            }
             InfoBox.ScrollToCaret();
         }
 
@@ -31,46 +46,117 @@ namespace VP_Project
             if (!String.IsNullOrWhiteSpace(RegNameBox.Text))
             {
                 InfoBox.Clear();
-                Registration reg = UtilityClass.GetRegistration(RegNameBox.Text);
-                InfoBox.Text = reg.ToString();
+                if (mod == Mode.RegMode)
+                {
+                    Registration reg = UtilityClass.GetRegistration(RegNameBox.Text);
+                    if(reg != null) InfoBox.Text = reg.ToString();
+                }
+                else if (mod == Mode.OwnerMode)
+                {
+                    Owner o = UtilityClass.GetOwner(RegNameBox.Text);
+                    if(o != null) InfoBox.Text = o.ToString();
+                }
                 InfoBox.ScrollToCaret();
-            }            
+            }
         }
 
         private void PopulateListBox()
         {
-            RegList.Items.Clear();
-            UtilityClass.Regs.Clear();
-            DirectoryInfo dinfo = new DirectoryInfo(UtilityClass.BaseFolder);
+            RegList.Items.Clear();            
+            if(mod == Mode.RegMode)
+            {
+                UtilityClass.Regs.Clear();
+                DirectoryInfo dinfo = new DirectoryInfo(UtilityClass.BaseFolderRegs);
+                FileInfo[] Files = dinfo.GetFiles("*.json");
+                foreach (FileInfo file in Files)
+                {
+                    Registration reg = UtilityClass.Deserialize<Registration>(UtilityClass.BaseFolderRegs + file.Name);
+                    UtilityClass.Regs.Add(reg);
+                    RegList.Items.Add(reg.Name);
+                }
+            }
+            else if(mod == Mode.OwnerMode)
+            {
+                UtilityClass.Owners.Clear();
+                DirectoryInfo dinfo = new DirectoryInfo(UtilityClass.BaseFolderOwners);
+                FileInfo[] Files = dinfo.GetFiles("*.json");
+                foreach (FileInfo file in Files)
+                {
+                    Owner o = UtilityClass.Deserialize<Owner>(UtilityClass.BaseFolderOwners + file.Name);
+                    UtilityClass.Owners.Add(o);
+                    RegList.Items.Add(o.Name);
+                }
+            }
+        }
+        /*private void PopulateOwnerDict()
+        {
+            foreach (Registration reg in UtilityClass.Regs)
+            {
+                if (!String.IsNullOrEmpty(reg.Owner))
+                {
+                    if (UtilityClass.ownerRegs.ContainsKey(reg.Owner))
+                    {
+                        UtilityClass.ownerRegs.TryGetValue(reg.Owner, out List<Registration> value);
+                        value.Add(reg);
+                        UtilityClass.ownerRegs[reg.Owner] = value;
+                    }
+                    else
+                    {
+                        UtilityClass.ownerRegs[reg.Owner] = new List<Registration> { reg };
+                    }
+                }
+            }
+        }*/
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            DirectoryInfo dinfo = new DirectoryInfo(UtilityClass.BaseFolderOwners);
             FileInfo[] Files = dinfo.GetFiles("*.json");
             foreach (FileInfo file in Files)
             {
-                RegList.Items.Add(file.Name.Replace(".json", ""));
-                Registration reg = UtilityClass.Deserialize(UtilityClass.BaseFolder + file.Name);
-                UtilityClass.Regs.Add(reg);
+                Owner o = UtilityClass.Deserialize<Owner>(UtilityClass.BaseFolderOwners + file.Name);
+                UtilityClass.Owners.Add(o);
             }
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {          
             PopulateListBox();
-            ButtonsDisable();            
+            ButtonsDisable();
+            //PopulateOwnerDict();
         }
 
         private void DeleteFile()
         {
-            DialogResult dr = MessageBox.Show("Дали сакате да ја избришете регистрацијата " + RegNameBox.Text + "?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (dr == DialogResult.Yes)
+            if(mod == Mode.RegMode)
             {
-                File.Delete(UtilityClass.BaseFolder + RegNameBox.Text + ".json");
-                PopulateListBox();
-                ButtonsDisable();
-                RegNameBox.ResetText();
-                InfoBox.Clear();
+                DialogResult dr = MessageBox.Show("Дали сакате да ја избришете регистрацијата " + RegNameBox.Text + "?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (dr == DialogResult.Yes)
+                {
+                    File.Delete(UtilityClass.BaseFolderRegs + RegNameBox.Text + ".json");
+                    PopulateListBox();
+                    ButtonsDisable();
+                    RegNameBox.ResetText();
+                    InfoBox.Clear();
+                }
+            }
+            else if(mod == Mode.OwnerMode)
+            {
+                DialogResult dr = MessageBox.Show("Дали сакате да го избришете сопственикот " + RegNameBox.Text + "?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (dr == DialogResult.Yes)
+                {
+                    Owner o = UtilityClass.GetOwner(RegNameBox.Text);
+                    File.Delete(UtilityClass.BaseFolderOwners + o.ID + ".json");
+                    foreach(Registration reg in o.GetRegList())
+                    {
+                        reg.Owner = new Owner();
+                        UtilityClass.Serialize<Registration>(reg, reg.Name);
+                    }
+                    PopulateListBox();
+                    ButtonsDisable();
+                    RegNameBox.ResetText();
+                    InfoBox.Clear();
+                }
             }
         }
 
-//BUTTONS
+        //BUTTONS
 
         public void ButtonsEnable()
         {
@@ -108,8 +194,17 @@ namespace VP_Project
 
         private void btnAddNew_Click(object sender, EventArgs e)
         {
-            NewEntryForm entryform = new NewEntryForm();
-            entryform.ShowDialog();
+            if(mod == Mode.RegMode)
+            {
+                NewEntryForm entryform = new NewEntryForm();
+                entryform.ShowDialog();
+            }
+            else if(mod == Mode.OwnerMode)
+            {
+                NewOwnerForm ownerform = new NewOwnerForm();
+                ownerform.ShowDialog();
+            }
+            
         }
 
         private void btnRefresh_Click(object sender, EventArgs e)
@@ -129,8 +224,21 @@ namespace VP_Project
             if (ButtonsToggle == false) return;
             else
             {
-                FileEditorForm editform = new FileEditorForm(UtilityClass.GetRegistration(RegNameBox.Text));
-                editform.ShowDialog();                        
+                if(mod == Mode.RegMode)
+                {
+                    FileEditorForm editform = new FileEditorForm(UtilityClass.GetRegistration(RegNameBox.Text));
+                    editform.ShowDialog();
+                }
+                else if(mod == Mode.OwnerMode)
+                {
+                    OwnerEditForm ownerEditForm = new OwnerEditForm(UtilityClass.GetOwner(RegNameBox.Text));
+                    ownerEditForm.ShowDialog();
+                    if (ownerEditForm.DialogResult == DialogResult.OK)
+                    {
+                        RegNameBox.Text = ownerEditForm.NewName;
+                        Refresher();
+                    }
+                }
             }
         }
 
@@ -160,7 +268,7 @@ namespace VP_Project
             invform.ShowDialog();
         }
 
-//FORM BORDER
+        //FORM BORDER
 
         private void panel1_MouseDown(object sender, MouseEventArgs e)
         {
@@ -204,21 +312,21 @@ namespace VP_Project
             ClickedONPanel = false;
         }
 
-//OTHER
+        //OTHER
         public void SearchList()
-        {            
+        {
             PopulateListBox();
             var itemList = RegList.Items.Cast<string>().ToList();
             if (itemList.Count > 0)
             {
                 RegList.Items.Clear();
-                RegList.Items.AddRange(itemList.Where(i => i.Contains(UtilityClass.FormatRegName(SearchBox.Text))).ToArray());                       
+                RegList.Items.AddRange(itemList.Where(i => i.Contains(UtilityClass.FormatRegName(SearchBox.Text))).ToArray());
             }
         }
 
         private void RegList_DoubleClick(object sender, EventArgs e)
         {
-            if(RegList.SelectedIndex != -1) 
+            if (RegList.SelectedIndex != -1)
             {
                 TextReader();
                 ButtonsEnable();
@@ -243,13 +351,6 @@ namespace VP_Project
                 }
                 else return;
             }
-            /*if(e.KeyCode == Keys.M)
-            {
-                if(!String.IsNullOrEmpty(RegNameBox.Text))
-                {
-                    MessageBox.Show(UtilityClass.GetRegistration(RegNameBox.Text).ToString());
-                }
-            }*/
         }
 
         private void Form1_Activated(object sender, EventArgs e)
@@ -271,6 +372,42 @@ namespace VP_Project
                 e = new DrawItemEventArgs(e.Graphics, e.Font, e.Bounds, e.Index, e.State ^ DrawItemState.Selected, e.ForeColor, Color.FromArgb(255, 79, 88, 117));
             e.DrawBackground();
             e.Graphics.DrawString(RegList.Items[e.Index].ToString(), e.Font, Brushes.White, e.Bounds, StringFormat.GenericDefault);
+            e.DrawFocusRectangle();
+        }
+
+        private void displayMode_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (displayMode.SelectedIndex == 0) mod = Mode.RegMode;
+            else if (displayMode.SelectedIndex == 1) mod = Mode.OwnerMode;
+            InfoBox.Clear();
+            RegNameBox.ResetText();
+            ButtonsDisable();
+            ChangeButtonsText();
+            PopulateListBox();
+        }
+
+        private void ChangeButtonsText()
+        {
+            if(mod == Mode.RegMode)
+            {
+                btnAddNew.Text = "Нова Регистрација";
+                btnDelete.Text = "Избриши Регистрација";
+            }
+            else if(mod == Mode.OwnerMode) 
+            {
+                btnAddNew.Text = "Нов Сопственик";
+                btnDelete.Text = "Избриши Сопственик";
+            }
+        }
+
+        private void displayMode_DrawItem(object sender, DrawItemEventArgs e)
+        {
+            if (e.Index < 0) return;
+
+            if ((e.State & DrawItemState.Selected) == DrawItemState.Selected)
+                e = new DrawItemEventArgs(e.Graphics, e.Font, e.Bounds, e.Index, e.State ^ DrawItemState.Selected, e.ForeColor, Color.FromArgb(255, 79, 88, 117));
+            e.DrawBackground();
+            e.Graphics.DrawString(displayMode.Items[e.Index].ToString(), e.Font, Brushes.White, e.Bounds, StringFormat.GenericDefault);
             e.DrawFocusRectangle();
         }
     }

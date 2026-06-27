@@ -27,7 +27,7 @@ namespace VP_Project
         {
             if(IsFileEdited)
             {
-                UtilityClass.Serialize(reg);
+                UtilityClass.Serialize<Registration>(reg, reg.Name);
                 UtilityClass.Regs[UtilityClass.Regs.IndexOf(UtilityClass.GetRegistration(reg.Name))] = reg;
             }            
             DialogResult = DialogResult.OK;
@@ -38,7 +38,7 @@ namespace VP_Project
         {
             IsFileEdited = false;
             RegName.Text = reg.Name;
-            ownerNameEdit.Text = reg.Owner;
+            ownerNameEdit.Text = reg.Owner.Name;
             modelEdit.Text = reg.CarModel;
             kilometersEdit.Value = reg.Info[0].Kilometers;
             TextEditBox.Text = reg.Info[0].Text;
@@ -164,7 +164,7 @@ namespace VP_Project
 
         private void ownerNameEdit_Validating(object sender, System.ComponentModel.CancelEventArgs e)
         {
-            if (ownerNameEdit.Text != reg.Owner)
+            if (ownerNameEdit.Text != reg.Owner.Name)
             {
                 IsFileEdited = true;
             }
