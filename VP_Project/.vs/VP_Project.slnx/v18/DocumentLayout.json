@@ -1,34 +1,46 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Stef\\Desktop\\VP_Project - Copy - Copy\\",
+  "WorkspaceRootPath": "C:\\Users\\Stef\\Desktop\\JAS\\VP_Project\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{CDE73D94-ECBE-C3F3-0D3A-57801E945C33}|VP_Project\\VP_Project.csproj|c:\\users\\stef\\desktop\\vp_project - copy - copy\\vp_project\\fileeditorform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CDE73D94-ECBE-C3F3-0D3A-57801E945C33}|VP_Project\\VP_Project.csproj|solutionrelative:vp_project\\fileeditorform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CDE73D94-ECBE-C3F3-0D3A-57801E945C33}|VP_Project\\VP_Project.csproj|c:\\users\\stef\\desktop\\vp_project - copy - copy\\vp_project\\newentryform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CDE73D94-ECBE-C3F3-0D3A-57801E945C33}|VP_Project\\VP_Project.csproj|solutionrelative:vp_project\\newentryform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CDE73D94-ECBE-C3F3-0D3A-57801E945C33}|VP_Project\\VP_Project.csproj|c:\\users\\stef\\desktop\\vp_project - copy - copy\\vp_project\\fileeditorform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{CDE73D94-ECBE-C3F3-0D3A-57801E945C33}|VP_Project\\VP_Project.csproj|solutionrelative:vp_project\\fileeditorform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CDE73D94-ECBE-C3F3-0D3A-57801E945C33}|VP_Project\\VP_Project.csproj|c:\\users\\stef\\desktop\\vp_project - copy - copy\\vp_project\\utilityclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CDE73D94-ECBE-C3F3-0D3A-57801E945C33}|VP_Project\\VP_Project.csproj|solutionrelative:vp_project\\utilityclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CDE73D94-ECBE-C3F3-0D3A-57801E945C33}|VP_Project\\VP_Project.csproj|c:\\users\\stef\\desktop\\vp_project - copy - copy\\vp_project\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{CDE73D94-ECBE-C3F3-0D3A-57801E945C33}|VP_Project\\VP_Project.csproj|c:\\users\\stef\\desktop\\jas\\vp_project\\vp_project\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CDE73D94-ECBE-C3F3-0D3A-57801E945C33}|VP_Project\\VP_Project.csproj|solutionrelative:vp_project\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CDE73D94-ECBE-C3F3-0D3A-57801E945C33}|VP_Project\\VP_Project.csproj|c:\\users\\stef\\desktop\\vp_project - copy - copy\\vp_project\\owner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{CDE73D94-ECBE-C3F3-0D3A-57801E945C33}|VP_Project\\VP_Project.csproj|c:\\users\\stef\\desktop\\jas\\vp_project\\vp_project\\fileeditorform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CDE73D94-ECBE-C3F3-0D3A-57801E945C33}|VP_Project\\VP_Project.csproj|solutionrelative:vp_project\\fileeditorform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CDE73D94-ECBE-C3F3-0D3A-57801E945C33}|VP_Project\\VP_Project.csproj|c:\\users\\stef\\desktop\\jas\\vp_project\\vp_project\\fullscreentext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CDE73D94-ECBE-C3F3-0D3A-57801E945C33}|VP_Project\\VP_Project.csproj|solutionrelative:vp_project\\fullscreentext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CDE73D94-ECBE-C3F3-0D3A-57801E945C33}|VP_Project\\VP_Project.csproj|c:\\users\\stef\\desktop\\jas\\vp_project\\vp_project\\owner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CDE73D94-ECBE-C3F3-0D3A-57801E945C33}|VP_Project\\VP_Project.csproj|solutionrelative:vp_project\\owner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CDE73D94-ECBE-C3F3-0D3A-57801E945C33}|VP_Project\\VP_Project.csproj|c:\\users\\stef\\desktop\\vp_project - copy - copy\\vp_project\\registration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{CDE73D94-ECBE-C3F3-0D3A-57801E945C33}|VP_Project\\VP_Project.csproj|c:\\users\\stef\\desktop\\jas\\vp_project\\vp_project\\invoiceform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CDE73D94-ECBE-C3F3-0D3A-57801E945C33}|VP_Project\\VP_Project.csproj|solutionrelative:vp_project\\invoiceform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CDE73D94-ECBE-C3F3-0D3A-57801E945C33}|VP_Project\\VP_Project.csproj|C:\\Users\\Stef\\Desktop\\JAS\\VP_Project\\vp_project\\invoiceform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{CDE73D94-ECBE-C3F3-0D3A-57801E945C33}|VP_Project\\VP_Project.csproj|solutionrelative:vp_project\\invoiceform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CDE73D94-ECBE-C3F3-0D3A-57801E945C33}|VP_Project\\VP_Project.csproj|C:\\Users\\Stef\\Desktop\\JAS\\VP_Project\\vp_project\\fileeditorform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{CDE73D94-ECBE-C3F3-0D3A-57801E945C33}|VP_Project\\VP_Project.csproj|solutionrelative:vp_project\\fileeditorform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CDE73D94-ECBE-C3F3-0D3A-57801E945C33}|VP_Project\\VP_Project.csproj|c:\\users\\stef\\desktop\\jas\\vp_project\\vp_project\\utilityclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CDE73D94-ECBE-C3F3-0D3A-57801E945C33}|VP_Project\\VP_Project.csproj|solutionrelative:vp_project\\utilityclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CDE73D94-ECBE-C3F3-0D3A-57801E945C33}|VP_Project\\VP_Project.csproj|c:\\users\\stef\\desktop\\jas\\vp_project\\vp_project\\registration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CDE73D94-ECBE-C3F3-0D3A-57801E945C33}|VP_Project\\VP_Project.csproj|solutionrelative:vp_project\\registration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CDE73D94-ECBE-C3F3-0D3A-57801E945C33}|VP_Project\\VP_Project.csproj|c:\\users\\stef\\desktop\\jas\\vp_project\\vp_project\\infotext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CDE73D94-ECBE-C3F3-0D3A-57801E945C33}|VP_Project\\VP_Project.csproj|solutionrelative:vp_project\\infotext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,93 +50,125 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "NewEntryForm.cs",
-              "DocumentMoniker": "C:\\Users\\Stef\\Desktop\\VP_Project - Copy - Copy\\VP_Project\\NewEntryForm.cs",
-              "RelativeDocumentMoniker": "VP_Project\\NewEntryForm.cs",
-              "ToolTip": "C:\\Users\\Stef\\Desktop\\VP_Project - Copy - Copy\\VP_Project\\NewEntryForm.cs",
-              "RelativeToolTip": "VP_Project\\NewEntryForm.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAowKMAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-27T16:59:41.637Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "FileEditorForm.cs",
-              "DocumentMoniker": "C:\\Users\\Stef\\Desktop\\VP_Project - Copy - Copy\\VP_Project\\FileEditorForm.cs",
-              "RelativeDocumentMoniker": "VP_Project\\FileEditorForm.cs",
-              "ToolTip": "C:\\Users\\Stef\\Desktop\\VP_Project - Copy - Copy\\VP_Project\\FileEditorForm.cs",
-              "RelativeToolTip": "VP_Project\\FileEditorForm.cs",
-              "ViewState": "AgIAAKIAAAAAAAAAAAAWwLsAAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-27T14:21:59.265Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "FileEditorForm.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Stef\\Desktop\\VP_Project - Copy - Copy\\VP_Project\\FileEditorForm.cs",
-              "RelativeDocumentMoniker": "VP_Project\\FileEditorForm.cs",
-              "ToolTip": "C:\\Users\\Stef\\Desktop\\VP_Project - Copy - Copy\\VP_Project\\FileEditorForm.cs [Design]",
-              "RelativeToolTip": "VP_Project\\FileEditorForm.cs [Design]",
+              "Title": "FullScreenText.cs",
+              "DocumentMoniker": "C:\\Users\\Stef\\Desktop\\JAS\\VP_Project\\VP_Project\\FullScreenText.cs",
+              "RelativeDocumentMoniker": "VP_Project\\FullScreenText.cs",
+              "ToolTip": "C:\\Users\\Stef\\Desktop\\JAS\\VP_Project\\VP_Project\\FullScreenText.cs",
+              "RelativeToolTip": "VP_Project\\FullScreenText.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADEAAABGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-27T16:56:43.924Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2026-06-28T11:23:14.632Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "UtilityClass.cs",
-              "DocumentMoniker": "C:\\Users\\Stef\\Desktop\\VP_Project - Copy - Copy\\VP_Project\\UtilityClass.cs",
-              "RelativeDocumentMoniker": "VP_Project\\UtilityClass.cs",
-              "ToolTip": "C:\\Users\\Stef\\Desktop\\VP_Project - Copy - Copy\\VP_Project\\UtilityClass.cs",
-              "RelativeToolTip": "VP_Project\\UtilityClass.cs",
-              "ViewState": "AgIAADMAAAAAAAAAAAAkwAwAAABMAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "FileEditorForm.cs",
+              "DocumentMoniker": "C:\\Users\\Stef\\Desktop\\JAS\\VP_Project\\VP_Project\\FileEditorForm.cs",
+              "RelativeDocumentMoniker": "VP_Project\\FileEditorForm.cs",
+              "ToolTip": "C:\\Users\\Stef\\Desktop\\JAS\\VP_Project\\VP_Project\\FileEditorForm.cs",
+              "RelativeToolTip": "VP_Project\\FileEditorForm.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAALIAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-27T15:05:21.644Z",
+              "WhenOpened": "2026-06-28T10:59:29.044Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "Owner.cs",
-              "DocumentMoniker": "C:\\Users\\Stef\\Desktop\\VP_Project - Copy - Copy\\VP_Project\\Owner.cs",
-              "RelativeDocumentMoniker": "VP_Project\\Owner.cs",
-              "ToolTip": "C:\\Users\\Stef\\Desktop\\VP_Project - Copy - Copy\\VP_Project\\Owner.cs",
-              "RelativeToolTip": "VP_Project\\Owner.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAwwDIAAAANAAAAAAAAAA==",
+              "Title": "InvoiceForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Stef\\Desktop\\JAS\\VP_Project\\VP_Project\\InvoiceForm.cs",
+              "RelativeDocumentMoniker": "VP_Project\\InvoiceForm.cs",
+              "ToolTip": "C:\\Users\\Stef\\Desktop\\JAS\\VP_Project\\VP_Project\\InvoiceForm.cs [Design]",
+              "RelativeToolTip": "VP_Project\\InvoiceForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-27T14:30:21.18Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-28T10:57:51.766Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "InvoiceForm.cs",
+              "DocumentMoniker": "C:\\Users\\Stef\\Desktop\\JAS\\VP_Project\\VP_Project\\InvoiceForm.cs",
+              "RelativeDocumentMoniker": "VP_Project\\InvoiceForm.cs",
+              "ToolTip": "C:\\Users\\Stef\\Desktop\\JAS\\VP_Project\\VP_Project\\InvoiceForm.cs",
+              "RelativeToolTip": "VP_Project\\InvoiceForm.cs",
+              "ViewState": "AgIAAIQBAAAAAAAAAAAUwJEBAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-28T10:57:26.19Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
+              "Title": "FileEditorForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Stef\\Desktop\\JAS\\VP_Project\\VP_Project\\FileEditorForm.cs",
+              "RelativeDocumentMoniker": "VP_Project\\FileEditorForm.cs",
+              "ToolTip": "C:\\Users\\Stef\\Desktop\\JAS\\VP_Project\\VP_Project\\FileEditorForm.cs [Design]",
+              "RelativeToolTip": "VP_Project\\FileEditorForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-27T16:56:43.924Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "InfoText.cs",
+              "DocumentMoniker": "C:\\Users\\Stef\\Desktop\\JAS\\VP_Project\\VP_Project\\InfoText.cs",
+              "RelativeDocumentMoniker": "VP_Project\\InfoText.cs",
+              "ToolTip": "C:\\Users\\Stef\\Desktop\\JAS\\VP_Project\\VP_Project\\InfoText.cs",
+              "RelativeToolTip": "VP_Project\\InfoText.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-27T19:04:31.304Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "UtilityClass.cs",
+              "DocumentMoniker": "C:\\Users\\Stef\\Desktop\\JAS\\VP_Project\\VP_Project\\UtilityClass.cs",
+              "RelativeDocumentMoniker": "VP_Project\\UtilityClass.cs",
+              "ToolTip": "C:\\Users\\Stef\\Desktop\\JAS\\VP_Project\\VP_Project\\UtilityClass.cs",
+              "RelativeToolTip": "VP_Project\\UtilityClass.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-27T15:05:21.644Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Owner.cs",
+              "DocumentMoniker": "C:\\Users\\Stef\\Desktop\\JAS\\VP_Project\\VP_Project\\Owner.cs",
+              "RelativeDocumentMoniker": "VP_Project\\Owner.cs",
+              "ToolTip": "C:\\Users\\Stef\\Desktop\\JAS\\VP_Project\\VP_Project\\Owner.cs",
+              "RelativeToolTip": "VP_Project\\Owner.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-27T14:30:21.18Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "Registration.cs",
-              "DocumentMoniker": "C:\\Users\\Stef\\Desktop\\VP_Project - Copy - Copy\\VP_Project\\Registration.cs",
+              "DocumentMoniker": "C:\\Users\\Stef\\Desktop\\JAS\\VP_Project\\VP_Project\\Registration.cs",
               "RelativeDocumentMoniker": "VP_Project\\Registration.cs",
-              "ToolTip": "C:\\Users\\Stef\\Desktop\\VP_Project - Copy - Copy\\VP_Project\\Registration.cs",
+              "ToolTip": "C:\\Users\\Stef\\Desktop\\JAS\\VP_Project\\VP_Project\\Registration.cs",
               "RelativeToolTip": "VP_Project\\Registration.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAcwB8AAAAcAAAAAAAAAA==",
+              "ViewState": "AgIAAA0AAAAAAAAAAAA0wDQAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-06-27T14:20:14.255Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "Form1.cs",
-              "DocumentMoniker": "C:\\Users\\Stef\\Desktop\\VP_Project - Copy - Copy\\VP_Project\\Form1.cs",
+              "DocumentMoniker": "C:\\Users\\Stef\\Desktop\\JAS\\VP_Project\\VP_Project\\Form1.cs",
               "RelativeDocumentMoniker": "VP_Project\\Form1.cs",
-              "ToolTip": "C:\\Users\\Stef\\Desktop\\VP_Project - Copy - Copy\\VP_Project\\Form1.cs",
+              "ToolTip": "C:\\Users\\Stef\\Desktop\\JAS\\VP_Project\\VP_Project\\Form1.cs",
               "RelativeToolTip": "VP_Project\\Form1.cs",
-              "ViewState": "AgIAAHsAAAAAAAAAAAAmwJQAAABMAAAAAAAAAA==",
+              "ViewState": "AgIAAH4BAAAAAAAAAAAIwIgBAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-06-21T19:26:54.595Z",
               "EditorCaption": ""

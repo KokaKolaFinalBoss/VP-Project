@@ -37,8 +37,7 @@ namespace VP_Project
         }
 
         private void FileEditorForm_Load(object sender, EventArgs e)
-        {
-            IsFileEdited = false;
+        {            
             RegName.Text = reg.Name;
             if (UtilityClass.DoesOwnerExist(reg.Owner.ID))
             {
@@ -49,6 +48,7 @@ namespace VP_Project
             kilometersEdit.Value = reg.Info[0].Kilometers;
             TextEditBox.Text = reg.Info[0].Text;
             StartingKMValue = kilometersEdit.Value.ToString();
+            IsFileEdited = false;
         }
 
 

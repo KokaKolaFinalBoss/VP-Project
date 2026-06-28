@@ -32,9 +32,9 @@ namespace VP_Project
         {
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InvoiceForm));
-            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             FeedbackLabel = new fadinglabel.FadingLabel();
             btnClose = new Button();
             panel1 = new Panel();
@@ -60,7 +60,7 @@ namespace VP_Project
             Amount = new DataGridViewTextBoxColumn();
             Price = new DataGridViewTextBoxColumn();
             TimerFadeOut = new System.Windows.Forms.Timer(components);
-            ownerNameBox = new TextBox();
+            ownerSelect = new FlatComboExample.Net.FlatComboBox();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
@@ -306,24 +306,24 @@ namespace VP_Project
             DataGrid.BackgroundColor = Color.FromArgb(59, 66, 87);
             DataGrid.BorderStyle = BorderStyle.None;
             DataGrid.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = Color.FromArgb(35, 40, 54);
-            dataGridViewCellStyle4.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
-            dataGridViewCellStyle4.ForeColor = Color.White;
-            dataGridViewCellStyle4.SelectionBackColor = Color.FromArgb(35, 40, 54);
-            dataGridViewCellStyle4.SelectionForeColor = Color.White;
-            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
-            DataGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = Color.FromArgb(35, 40, 54);
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            dataGridViewCellStyle1.ForeColor = Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(35, 40, 54);
+            dataGridViewCellStyle1.SelectionForeColor = Color.White;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            DataGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             DataGrid.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             DataGrid.Columns.AddRange(new DataGridViewColumn[] { ID, ItemDesc, Amount, Price });
-            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = Color.FromArgb(35, 40, 54);
-            dataGridViewCellStyle5.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle5.ForeColor = Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = Color.FromArgb(59, 66, 87);
-            dataGridViewCellStyle5.SelectionForeColor = Color.White;
-            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.True;
-            DataGrid.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = Color.FromArgb(35, 40, 54);
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle2.ForeColor = Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(59, 66, 87);
+            dataGridViewCellStyle2.SelectionForeColor = Color.White;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+            DataGrid.DefaultCellStyle = dataGridViewCellStyle2;
             DataGrid.EnableHeadersVisualStyles = false;
             DataGrid.GridColor = Color.FromArgb(59, 66, 87);
             DataGrid.Location = new Point(271, 62);
@@ -331,14 +331,14 @@ namespace VP_Project
             DataGrid.Name = "DataGrid";
             DataGrid.ReadOnly = true;
             DataGrid.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = Color.FromArgb(35, 40, 54);
-            dataGridViewCellStyle6.Font = new Font("Segoe UI", 15F);
-            dataGridViewCellStyle6.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = Color.FromArgb(35, 40, 54);
-            dataGridViewCellStyle6.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = DataGridViewTriState.True;
-            DataGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = Color.FromArgb(35, 40, 54);
+            dataGridViewCellStyle3.Font = new Font("Segoe UI", 15F);
+            dataGridViewCellStyle3.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(35, 40, 54);
+            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
+            DataGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             DataGrid.RowHeadersVisible = false;
             DataGrid.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             DataGrid.Size = new Size(396, 207);
@@ -376,15 +376,20 @@ namespace VP_Project
             // 
             TimerFadeOut.Tick += TimerFadeOut_Tick;
             // 
-            // ownerNameBox
+            // ownerSelect
             // 
-            ownerNameBox.BackColor = Color.FromArgb(59, 66, 87);
-            ownerNameBox.BorderStyle = BorderStyle.None;
-            ownerNameBox.ForeColor = Color.White;
-            ownerNameBox.Location = new Point(31, 80);
-            ownerNameBox.Name = "ownerNameBox";
-            ownerNameBox.Size = new Size(174, 16);
-            ownerNameBox.TabIndex = 50;
+            ownerSelect.BackColor = Color.FromArgb(59, 66, 87);
+            ownerSelect.BorderColor = Color.FromArgb(59, 66, 87);
+            ownerSelect.ButtonColor = Color.Silver;
+            ownerSelect.DrawMode = DrawMode.OwnerDrawFixed;
+            ownerSelect.DropDownStyle = ComboBoxStyle.DropDownList;
+            ownerSelect.ForeColor = Color.White;
+            ownerSelect.Location = new Point(27, 80);
+            ownerSelect.Name = "ownerSelect";
+            ownerSelect.Size = new Size(178, 24);
+            ownerSelect.TabIndex = 50;
+            ownerSelect.DrawItem += ownerSelect_DrawItem;
+            ownerSelect.SelectedIndexChanged += ownerSelect_SelectedIndexChanged;
             // 
             // InvoiceForm
             // 
@@ -392,7 +397,7 @@ namespace VP_Project
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(35, 40, 54);
             ClientSize = new Size(694, 383);
-            Controls.Add(ownerNameBox);
+            Controls.Add(ownerSelect);
             Controls.Add(DataGrid);
             Controls.Add(FeedbackLabel);
             Controls.Add(btnAddItem);
@@ -456,6 +461,6 @@ namespace VP_Project
         private DataGridViewTextBoxColumn Amount;
         private DataGridViewTextBoxColumn Price;
         private System.Windows.Forms.Timer TimerFadeOut;
-        private TextBox ownerNameBox;
+        private FlatComboExample.Net.FlatComboBox ownerSelect;
     }
 }

@@ -247,8 +247,16 @@ namespace VP_Project
             if (ButtonsToggle == false) return;
             else
             {
-                FullScreenText fsform = new FullScreenText(UtilityClass.GetRegistration(RegNameBox.Text));
-                fsform.ShowDialog();
+                if(mod == Mode.RegMode)
+                {
+                    FullScreenText fsform = new FullScreenText(UtilityClass.GetRegistration(RegNameBox.Text));
+                    fsform.ShowDialog();
+                }
+                else if(mod == Mode.OwnerMode)
+                {
+                    FullScreenText fsform = new FullScreenText(UtilityClass.GetOwner(RegNameBox.Text));
+                    fsform.ShowDialog();
+                }
             }
         }
 
@@ -320,7 +328,8 @@ namespace VP_Project
             if (itemList.Count > 0)
             {
                 RegList.Items.Clear();
-                RegList.Items.AddRange(itemList.Where(i => i.Contains(UtilityClass.FormatRegName(SearchBox.Text))).ToArray());
+                if(mod == Mode.RegMode) RegList.Items.AddRange(itemList.Where(i => i.Contains(UtilityClass.FormatRegName(SearchBox.Text))).ToArray());
+                else if(mod == Mode.OwnerMode) RegList.Items.AddRange(itemList.Where(i => i.ToLower().Contains(SearchBox.Text)).ToArray());
             }
         }
 
@@ -381,6 +390,7 @@ namespace VP_Project
             else if (displayMode.SelectedIndex == 1) mod = Mode.OwnerMode;
             InfoBox.Clear();
             RegNameBox.ResetText();
+            SearchBox.Clear();
             ButtonsDisable();
             ChangeButtonsText();
             PopulateListBox();

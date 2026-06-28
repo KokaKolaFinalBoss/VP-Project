@@ -595,11 +595,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Stef\\Desktop\\VP_Project - Copy - Copy\\VP_Project\\VP_Project.csproj",
+      "projectUniqueName": "C:\\Users\\Stef\\Desktop\\JAS\\VP_Project\\VP_Project\\VP_Project.csproj",
       "projectName": "VP_Project",
-      "projectPath": "C:\\Users\\Stef\\Desktop\\VP_Project - Copy - Copy\\VP_Project\\VP_Project.csproj",
+      "projectPath": "C:\\Users\\Stef\\Desktop\\JAS\\VP_Project\\VP_Project\\VP_Project.csproj",
       "packagesPath": "C:\\Users\\Stef\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Stef\\Desktop\\VP_Project - Copy - Copy\\VP_Project\\obj\\",
+      "outputPath": "C:\\Users\\Stef\\Desktop\\JAS\\VP_Project\\VP_Project\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
