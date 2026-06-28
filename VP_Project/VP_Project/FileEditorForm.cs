@@ -1,5 +1,6 @@
 ﻿
 
+using iText.StyledXmlParser.Jsoup.Select;
 using Microsoft.VisualBasic.Devices;
 
 namespace VP_Project
@@ -22,14 +23,15 @@ namespace VP_Project
             InitializeComponent();
             this.reg = new Registration(reg);
             ClickedONPanel = false;
+            foreach (Owner o in UtilityClass.Owners) ownerSelect.Items.Add(o.Name);
         }
         private void btnConfirm_Click(object sender, EventArgs e)
         {
-            if(IsFileEdited)
+            if (IsFileEdited)
             {
                 UtilityClass.Serialize<Registration>(reg, reg.Name);
                 UtilityClass.Regs[UtilityClass.Regs.IndexOf(UtilityClass.GetRegistration(reg.Name))] = reg;
-            }            
+            }
             DialogResult = DialogResult.OK;
             this.Close();
         }
@@ -38,7 +40,11 @@ namespace VP_Project
         {
             IsFileEdited = false;
             RegName.Text = reg.Name;
-            ownerNameEdit.Text = reg.Owner.Name;
+            if (UtilityClass.DoesOwnerExist(reg.Owner.ID))
+            {
+                ownerSelect.SelectedItem = reg.Owner.Name;
+            }
+            else ownerSelect.SelectedIndex = -1;
             modelEdit.Text = reg.CarModel;
             kilometersEdit.Value = reg.Info[0].Kilometers;
             TextEditBox.Text = reg.Info[0].Text;
@@ -159,13 +165,26 @@ namespace VP_Project
             if (modelEdit.Text != reg.CarModel)
             {
                 IsFileEdited = true;
+                reg.CarModel = modelEdit.Text;
             }
         }
-
-        private void ownerNameEdit_Validating(object sender, System.ComponentModel.CancelEventArgs e)
+        private void ownerSelect_DrawItem(object sender, DrawItemEventArgs e)
         {
-            if (ownerNameEdit.Text != reg.Owner.Name)
+            if (e.Index < 0) return;
+
+            if ((e.State & DrawItemState.Selected) == DrawItemState.Selected)
+                e = new DrawItemEventArgs(e.Graphics, e.Font, e.Bounds, e.Index, e.State ^ DrawItemState.Selected, e.ForeColor, Color.FromArgb(255, 79, 88, 117));
+            e.DrawBackground();
+            e.Graphics.DrawString(ownerSelect.Items[e.Index].ToString(), e.Font, Brushes.White, e.Bounds, StringFormat.GenericDefault);
+            e.DrawFocusRectangle();
+        }
+
+        private void ownerSelect_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(ownerSelect.SelectedIndex != -1)
             {
+                Owner o = UtilityClass.GetOwner(ownerSelect.Text);
+                reg.Owner = o;
                 IsFileEdited = true;
             }
         }

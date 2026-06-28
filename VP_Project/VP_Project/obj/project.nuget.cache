@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "0f27bPBx6l0=",
+  "dgSpecHash": "+6pDWlLk8P4=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Stef\\Desktop\\VP_Project - Copy\\VP_Project\\VP_Project.csproj",
+  "projectFilePath": "C:\\Users\\Stef\\Desktop\\VP_Project - Copy - Copy\\VP_Project\\VP_Project.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Stef\\.nuget\\packages\\bouncycastle.cryptography\\2.2.1\\bouncycastle.cryptography.2.2.1.nupkg.sha512",
     "C:\\Users\\Stef\\.nuget\\packages\\itext\\8.0.2\\itext.8.0.2.nupkg.sha512",
@@ -22,13 +22,40 @@
   ],
   "logs": [
     {
-      "code": "NU1900",
+      "code": "NU1902",
       "level": "Warning",
-      "message": "Error occurred while getting package vulnerability data: Unable to load the service index for source https://api.nuget.org/v3/index.json.",
-      "projectPath": "C:\\Users\\Stef\\Desktop\\VP_Project - Copy\\VP_Project\\VP_Project.csproj",
+      "message": "Package 'BouncyCastle.Cryptography' 2.2.1 has a known moderate severity vulnerability, https://github.com/advisories/GHSA-8xfc-gm6g-vgpv",
+      "projectPath": "C:\\Users\\Stef\\Desktop\\VP_Project - Copy - Copy\\VP_Project\\VP_Project.csproj",
       "warningLevel": 1,
-      "filePath": "C:\\Users\\Stef\\Desktop\\VP_Project - Copy\\VP_Project\\VP_Project.csproj",
-      "targetGraphs": []
+      "filePath": "C:\\Users\\Stef\\Desktop\\VP_Project - Copy - Copy\\VP_Project\\VP_Project.csproj",
+      "libraryId": "BouncyCastle.Cryptography",
+      "targetGraphs": [
+        "net10.0-windows"
+      ]
+    },
+    {
+      "code": "NU1902",
+      "level": "Warning",
+      "message": "Package 'BouncyCastle.Cryptography' 2.2.1 has a known moderate severity vulnerability, https://github.com/advisories/GHSA-m44j-cfrm-g8qc",
+      "projectPath": "C:\\Users\\Stef\\Desktop\\VP_Project - Copy - Copy\\VP_Project\\VP_Project.csproj",
+      "warningLevel": 1,
+      "filePath": "C:\\Users\\Stef\\Desktop\\VP_Project - Copy - Copy\\VP_Project\\VP_Project.csproj",
+      "libraryId": "BouncyCastle.Cryptography",
+      "targetGraphs": [
+        "net10.0-windows"
+      ]
+    },
+    {
+      "code": "NU1902",
+      "level": "Warning",
+      "message": "Package 'BouncyCastle.Cryptography' 2.2.1 has a known moderate severity vulnerability, https://github.com/advisories/GHSA-v435-xc8x-wvr9",
+      "projectPath": "C:\\Users\\Stef\\Desktop\\VP_Project - Copy - Copy\\VP_Project\\VP_Project.csproj",
+      "warningLevel": 1,
+      "filePath": "C:\\Users\\Stef\\Desktop\\VP_Project - Copy - Copy\\VP_Project\\VP_Project.csproj",
+      "libraryId": "BouncyCastle.Cryptography",
+      "targetGraphs": [
+        "net10.0-windows"
+      ]
     }
   ]
 }

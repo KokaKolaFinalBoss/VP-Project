@@ -46,7 +46,7 @@
             Model = new Label();
             Kilometers = new Label();
             kilometersEdit = new NumericUpDown();
-            ownerNameEdit = new TextBox();
+            ownerSelect = new FlatComboExample.Net.FlatComboBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             panel2.SuspendLayout();
             panel1.SuspendLayout();
@@ -253,16 +253,20 @@
             kilometersEdit.TabIndex = 36;
             kilometersEdit.Validated += kilometersEdit_Validated;
             // 
-            // ownerNameEdit
+            // ownerSelect
             // 
-            ownerNameEdit.BackColor = Color.FromArgb(59, 66, 87);
-            ownerNameEdit.BorderStyle = BorderStyle.None;
-            ownerNameEdit.ForeColor = Color.White;
-            ownerNameEdit.Location = new Point(23, 79);
-            ownerNameEdit.Name = "ownerNameEdit";
-            ownerNameEdit.Size = new Size(209, 16);
-            ownerNameEdit.TabIndex = 37;
-            ownerNameEdit.Validating += ownerNameEdit_Validating;
+            ownerSelect.BackColor = Color.FromArgb(59, 66, 87);
+            ownerSelect.BorderColor = Color.FromArgb(59, 66, 87);
+            ownerSelect.ButtonColor = Color.Silver;
+            ownerSelect.DrawMode = DrawMode.OwnerDrawFixed;
+            ownerSelect.DropDownStyle = ComboBoxStyle.DropDownList;
+            ownerSelect.ForeColor = Color.White;
+            ownerSelect.Location = new Point(23, 79);
+            ownerSelect.Name = "ownerSelect";
+            ownerSelect.Size = new Size(209, 24);
+            ownerSelect.TabIndex = 39;
+            ownerSelect.DrawItem += ownerSelect_DrawItem;
+            ownerSelect.SelectedIndexChanged += ownerSelect_SelectedIndexChanged;
             // 
             // FileEditorForm
             // 
@@ -270,7 +274,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(35, 40, 54);
             ClientSize = new Size(547, 333);
-            Controls.Add(ownerNameEdit);
+            Controls.Add(ownerSelect);
             Controls.Add(kilometersEdit);
             Controls.Add(Kilometers);
             Controls.Add(Model);
@@ -324,6 +328,6 @@
         private Label Kilometers;
         private Label PanelText;
         private NumericUpDown kilometersEdit;
-        private TextBox ownerNameEdit;
+        private FlatComboExample.Net.FlatComboBox ownerSelect;
     }
 }
