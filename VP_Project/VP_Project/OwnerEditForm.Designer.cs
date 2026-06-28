@@ -68,6 +68,9 @@
             PanelText.Size = new Size(111, 15);
             PanelText.TabIndex = 29;
             PanelText.Text = "Измени податоци";
+            PanelText.MouseDown += PanelText_MouseDown;
+            PanelText.MouseMove += PanelText_MouseMove;
+            PanelText.MouseUp += PanelText_MouseUp;
             // 
             // pictureBox1
             // 
@@ -191,6 +194,9 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(228, 19);
             panel1.TabIndex = 37;
+            panel1.MouseDown += panel1_MouseDown;
+            panel1.MouseMove += panel1_MouseMove;
+            panel1.MouseUp += panel1_MouseUp;
             // 
             // pictureBox2
             // 

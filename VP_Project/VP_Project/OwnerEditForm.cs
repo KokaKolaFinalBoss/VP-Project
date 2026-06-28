@@ -72,7 +72,7 @@ namespace VP_Project
         private void panel1_MouseDown(object sender, MouseEventArgs e)
         {
             ClickedONPanel = true;
-            mouse = new Point(-e.X, -e.Y);
+            mouse = new Point(-e.X, -e.Y - 2);
         }
 
         private void panel1_MouseMove(object sender, MouseEventArgs e)
@@ -93,7 +93,7 @@ namespace VP_Project
         private void PanelText_MouseDown(object sender, MouseEventArgs e)
         {
             ClickedONPanel = true;
-            mouse = new Point(-e.X - 28, -e.Y - 2);
+            mouse = new Point(-e.X - 27, -e.Y - 4);
         }
 
         private void PanelText_MouseMove(object sender, MouseEventArgs e)
