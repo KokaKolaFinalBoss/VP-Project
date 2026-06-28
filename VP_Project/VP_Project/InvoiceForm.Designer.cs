@@ -61,6 +61,10 @@ namespace VP_Project
             Price = new DataGridViewTextBoxColumn();
             TimerFadeOut = new System.Windows.Forms.Timer(components);
             ownerSelect = new FlatComboExample.Net.FlatComboBox();
+            panel3 = new Panel();
+            panel4 = new Panel();
+            panel5 = new Panel();
+            panel6 = new Panel();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
@@ -326,7 +330,7 @@ namespace VP_Project
             DataGrid.DefaultCellStyle = dataGridViewCellStyle2;
             DataGrid.EnableHeadersVisualStyles = false;
             DataGrid.GridColor = Color.FromArgb(59, 66, 87);
-            DataGrid.Location = new Point(271, 62);
+            DataGrid.Location = new Point(271, 58);
             DataGrid.MultiSelect = false;
             DataGrid.Name = "DataGrid";
             DataGrid.ReadOnly = true;
@@ -341,7 +345,7 @@ namespace VP_Project
             DataGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             DataGrid.RowHeadersVisible = false;
             DataGrid.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            DataGrid.Size = new Size(396, 207);
+            DataGrid.Size = new Size(396, 211);
             DataGrid.TabIndex = 48;
             // 
             // ID
@@ -391,6 +395,38 @@ namespace VP_Project
             ownerSelect.DrawItem += ownerSelect_DrawItem;
             ownerSelect.SelectedIndexChanged += ownerSelect_SelectedIndexChanged;
             // 
+            // panel3
+            // 
+            panel3.BackColor = Color.FromArgb(59, 66, 87);
+            panel3.Location = new Point(15, 170);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(205, 112);
+            panel3.TabIndex = 51;
+            // 
+            // panel4
+            // 
+            panel4.BackColor = Color.FromArgb(35, 40, 54);
+            panel4.Location = new Point(16, 171);
+            panel4.Name = "panel4";
+            panel4.Size = new Size(203, 110);
+            panel4.TabIndex = 52;
+            // 
+            // panel5
+            // 
+            panel5.BackColor = Color.FromArgb(35, 40, 54);
+            panel5.Location = new Point(16, 59);
+            panel5.Name = "panel5";
+            panel5.Size = new Size(203, 105);
+            panel5.TabIndex = 54;
+            // 
+            // panel6
+            // 
+            panel6.BackColor = Color.FromArgb(59, 66, 87);
+            panel6.Location = new Point(15, 58);
+            panel6.Name = "panel6";
+            panel6.Size = new Size(205, 107);
+            panel6.TabIndex = 53;
+            // 
             // InvoiceForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -415,6 +451,10 @@ namespace VP_Project
             Controls.Add(panel1);
             Controls.Add(pictureBox2);
             Controls.Add(panel2);
+            Controls.Add(panel4);
+            Controls.Add(panel3);
+            Controls.Add(panel5);
+            Controls.Add(panel6);
             FormBorderStyle = FormBorderStyle.None;
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "InvoiceForm";
@@ -462,5 +502,9 @@ namespace VP_Project
         private DataGridViewTextBoxColumn Price;
         private System.Windows.Forms.Timer TimerFadeOut;
         private FlatComboExample.Net.FlatComboBox ownerSelect;
+        private Panel panel3;
+        private Panel panel4;
+        private Panel panel5;
+        private Panel panel6;
     }
 }

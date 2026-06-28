@@ -3,20 +3,32 @@
   "WorkspaceRootPath": "C:\\Users\\Stef\\Desktop\\JAS\\VP_Project\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{CDE73D94-ECBE-C3F3-0D3A-57801E945C33}|VP_Project\\VP_Project.csproj|C:\\Users\\Stef\\Desktop\\JAS\\VP_Project\\vp_project\\invoiceform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{CDE73D94-ECBE-C3F3-0D3A-57801E945C33}|VP_Project\\VP_Project.csproj|solutionrelative:vp_project\\invoiceform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CDE73D94-ECBE-C3F3-0D3A-57801E945C33}|VP_Project\\VP_Project.csproj|C:\\Users\\Stef\\Desktop\\JAS\\VP_Project\\vp_project\\fileeditorform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{CDE73D94-ECBE-C3F3-0D3A-57801E945C33}|VP_Project\\VP_Project.csproj|solutionrelative:vp_project\\fileeditorform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CDE73D94-ECBE-C3F3-0D3A-57801E945C33}|VP_Project\\VP_Project.csproj|c:\\users\\stef\\desktop\\jas\\vp_project\\vp_project\\invoiceform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CDE73D94-ECBE-C3F3-0D3A-57801E945C33}|VP_Project\\VP_Project.csproj|solutionrelative:vp_project\\invoiceform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CDE73D94-ECBE-C3F3-0D3A-57801E945C33}|VP_Project\\VP_Project.csproj|c:\\users\\stef\\desktop\\jas\\vp_project\\vp_project\\fileeditorform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CDE73D94-ECBE-C3F3-0D3A-57801E945C33}|VP_Project\\VP_Project.csproj|solutionrelative:vp_project\\fileeditorform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{CDE73D94-ECBE-C3F3-0D3A-57801E945C33}|VP_Project\\VP_Project.csproj|c:\\users\\stef\\desktop\\jas\\vp_project\\vp_project\\ownereditform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CDE73D94-ECBE-C3F3-0D3A-57801E945C33}|VP_Project\\VP_Project.csproj|solutionrelative:vp_project\\ownereditform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CDE73D94-ECBE-C3F3-0D3A-57801E945C33}|VP_Project\\VP_Project.csproj|c:\\users\\stef\\desktop\\jas\\vp_project\\vp_project\\ownereditform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{CDE73D94-ECBE-C3F3-0D3A-57801E945C33}|VP_Project\\VP_Project.csproj|C:\\Users\\Stef\\Desktop\\JAS\\VP_Project\\vp_project\\ownereditform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{CDE73D94-ECBE-C3F3-0D3A-57801E945C33}|VP_Project\\VP_Project.csproj|solutionrelative:vp_project\\ownereditform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CDE73D94-ECBE-C3F3-0D3A-57801E945C33}|VP_Project\\VP_Project.csproj|c:\\users\\stef\\desktop\\jas\\vp_project\\vp_project\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CDE73D94-ECBE-C3F3-0D3A-57801E945C33}|VP_Project\\VP_Project.csproj|solutionrelative:vp_project\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CDE73D94-ECBE-C3F3-0D3A-57801E945C33}|VP_Project\\VP_Project.csproj|c:\\users\\stef\\desktop\\jas\\vp_project\\vp_project\\fileeditorform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CDE73D94-ECBE-C3F3-0D3A-57801E945C33}|VP_Project\\VP_Project.csproj|solutionrelative:vp_project\\fileeditorform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CDE73D94-ECBE-C3F3-0D3A-57801E945C33}|VP_Project\\VP_Project.csproj|c:\\users\\stef\\desktop\\jas\\vp_project\\vp_project\\fullscreentext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -25,18 +37,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{CDE73D94-ECBE-C3F3-0D3A-57801E945C33}|VP_Project\\VP_Project.csproj|c:\\users\\stef\\desktop\\jas\\vp_project\\vp_project\\owner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CDE73D94-ECBE-C3F3-0D3A-57801E945C33}|VP_Project\\VP_Project.csproj|solutionrelative:vp_project\\owner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CDE73D94-ECBE-C3F3-0D3A-57801E945C33}|VP_Project\\VP_Project.csproj|c:\\users\\stef\\desktop\\jas\\vp_project\\vp_project\\invoiceform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CDE73D94-ECBE-C3F3-0D3A-57801E945C33}|VP_Project\\VP_Project.csproj|solutionrelative:vp_project\\invoiceform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CDE73D94-ECBE-C3F3-0D3A-57801E945C33}|VP_Project\\VP_Project.csproj|C:\\Users\\Stef\\Desktop\\JAS\\VP_Project\\vp_project\\invoiceform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{CDE73D94-ECBE-C3F3-0D3A-57801E945C33}|VP_Project\\VP_Project.csproj|solutionrelative:vp_project\\invoiceform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CDE73D94-ECBE-C3F3-0D3A-57801E945C33}|VP_Project\\VP_Project.csproj|C:\\Users\\Stef\\Desktop\\JAS\\VP_Project\\vp_project\\fileeditorform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{CDE73D94-ECBE-C3F3-0D3A-57801E945C33}|VP_Project\\VP_Project.csproj|solutionrelative:vp_project\\fileeditorform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CDE73D94-ECBE-C3F3-0D3A-57801E945C33}|VP_Project\\VP_Project.csproj|c:\\users\\stef\\desktop\\jas\\vp_project\\vp_project\\utilityclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -58,11 +58,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "OwnerEditForm.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Stef\\Desktop\\JAS\\VP_Project\\VP_Project\\OwnerEditForm.cs",
               "RelativeDocumentMoniker": "VP_Project\\OwnerEditForm.cs",
@@ -74,7 +74,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "OwnerEditForm.cs",
               "DocumentMoniker": "C:\\Users\\Stef\\Desktop\\JAS\\VP_Project\\VP_Project\\OwnerEditForm.cs",
               "RelativeDocumentMoniker": "VP_Project\\OwnerEditForm.cs",
@@ -87,7 +87,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 7,
               "Title": "FullScreenText.cs",
               "DocumentMoniker": "C:\\Users\\Stef\\Desktop\\JAS\\VP_Project\\VP_Project\\FullScreenText.cs",
               "RelativeDocumentMoniker": "VP_Project\\FullScreenText.cs",
@@ -112,37 +112,40 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 0,
               "Title": "InvoiceForm.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Stef\\Desktop\\JAS\\VP_Project\\VP_Project\\InvoiceForm.cs",
               "RelativeDocumentMoniker": "VP_Project\\InvoiceForm.cs",
               "ToolTip": "C:\\Users\\Stef\\Desktop\\JAS\\VP_Project\\VP_Project\\InvoiceForm.cs [Design]",
               "RelativeToolTip": "VP_Project\\InvoiceForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-28T10:57:51.766Z"
+              "WhenOpened": "2026-06-28T10:57:51.766Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 2,
               "Title": "InvoiceForm.cs",
               "DocumentMoniker": "C:\\Users\\Stef\\Desktop\\JAS\\VP_Project\\VP_Project\\InvoiceForm.cs",
               "RelativeDocumentMoniker": "VP_Project\\InvoiceForm.cs",
               "ToolTip": "C:\\Users\\Stef\\Desktop\\JAS\\VP_Project\\VP_Project\\InvoiceForm.cs",
               "RelativeToolTip": "VP_Project\\InvoiceForm.cs",
-              "ViewState": "AgIAAIQBAAAAAAAAAAAUwJEBAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAACAAAAAAAAAAAAAjwDQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-28T10:57:26.19Z"
+              "WhenOpened": "2026-06-28T10:57:26.19Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 1,
               "Title": "FileEditorForm.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Stef\\Desktop\\JAS\\VP_Project\\VP_Project\\FileEditorForm.cs",
               "RelativeDocumentMoniker": "VP_Project\\FileEditorForm.cs",
               "ToolTip": "C:\\Users\\Stef\\Desktop\\JAS\\VP_Project\\VP_Project\\FileEditorForm.cs [Design]",
               "RelativeToolTip": "VP_Project\\FileEditorForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-27T16:56:43.924Z"
+              "WhenOpened": "2026-06-27T16:56:43.924Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
@@ -170,7 +173,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 8,
               "Title": "Owner.cs",
               "DocumentMoniker": "C:\\Users\\Stef\\Desktop\\JAS\\VP_Project\\VP_Project\\Owner.cs",
               "RelativeDocumentMoniker": "VP_Project\\Owner.cs",
@@ -194,7 +197,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 6,
               "Title": "Form1.cs",
               "DocumentMoniker": "C:\\Users\\Stef\\Desktop\\JAS\\VP_Project\\VP_Project\\Form1.cs",
               "RelativeDocumentMoniker": "VP_Project\\Form1.cs",
@@ -202,8 +205,7 @@
               "RelativeToolTip": "VP_Project\\Form1.cs",
               "ViewState": "AgIAAH4BAAAAAAAAAAAIwIgBAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-21T19:26:54.595Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-21T19:26:54.595Z"
             }
           ]
         }

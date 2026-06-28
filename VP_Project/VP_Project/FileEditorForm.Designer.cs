@@ -47,11 +47,14 @@
             Kilometers = new Label();
             kilometersEdit = new NumericUpDown();
             ownerSelect = new FlatComboExample.Net.FlatComboBox();
+            panel4 = new Panel();
+            panel3 = new Panel();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             panel2.SuspendLayout();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)kilometersEdit).BeginInit();
+            panel4.SuspendLayout();
             SuspendLayout();
             // 
             // btnCancel
@@ -177,9 +180,9 @@
             modelEdit.BackColor = Color.FromArgb(59, 66, 87);
             modelEdit.BorderStyle = BorderStyle.None;
             modelEdit.ForeColor = Color.White;
-            modelEdit.Location = new Point(23, 133);
+            modelEdit.Location = new Point(23, 141);
             modelEdit.Name = "modelEdit";
-            modelEdit.Size = new Size(209, 16);
+            modelEdit.Size = new Size(218, 16);
             modelEdit.TabIndex = 18;
             modelEdit.Validating += modelEdit_Validating;
             // 
@@ -215,7 +218,7 @@
             // 
             Owner.AutoSize = true;
             Owner.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            Owner.Location = new Point(23, 61);
+            Owner.Location = new Point(23, 69);
             Owner.Name = "Owner";
             Owner.Size = new Size(78, 15);
             Owner.TabIndex = 23;
@@ -225,7 +228,7 @@
             // 
             Model.AutoSize = true;
             Model.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            Model.Location = new Point(23, 115);
+            Model.Location = new Point(23, 123);
             Model.Name = "Model";
             Model.Size = new Size(131, 15);
             Model.TabIndex = 24;
@@ -235,7 +238,7 @@
             // 
             Kilometers.AutoSize = true;
             Kilometers.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            Kilometers.Location = new Point(23, 170);
+            Kilometers.Location = new Point(11, 110);
             Kilometers.Name = "Kilometers";
             Kilometers.Size = new Size(136, 15);
             Kilometers.TabIndex = 25;
@@ -246,10 +249,10 @@
             kilometersEdit.BackColor = Color.FromArgb(59, 66, 87);
             kilometersEdit.BorderStyle = BorderStyle.None;
             kilometersEdit.ForeColor = Color.White;
-            kilometersEdit.Location = new Point(23, 188);
+            kilometersEdit.Location = new Point(11, 128);
             kilometersEdit.Maximum = new decimal(new int[] { 1410065407, 2, 0, 0 });
             kilometersEdit.Name = "kilometersEdit";
-            kilometersEdit.Size = new Size(209, 19);
+            kilometersEdit.Size = new Size(218, 19);
             kilometersEdit.TabIndex = 36;
             kilometersEdit.Validated += kilometersEdit_Validated;
             // 
@@ -261,12 +264,30 @@
             ownerSelect.DrawMode = DrawMode.OwnerDrawFixed;
             ownerSelect.DropDownStyle = ComboBoxStyle.DropDownList;
             ownerSelect.ForeColor = Color.White;
-            ownerSelect.Location = new Point(23, 79);
+            ownerSelect.Location = new Point(23, 87);
             ownerSelect.Name = "ownerSelect";
-            ownerSelect.Size = new Size(209, 24);
+            ownerSelect.Size = new Size(218, 24);
             ownerSelect.TabIndex = 39;
             ownerSelect.DrawItem += ownerSelect_DrawItem;
             ownerSelect.SelectedIndexChanged += ownerSelect_SelectedIndexChanged;
+            // 
+            // panel4
+            // 
+            panel4.BackColor = Color.FromArgb(35, 40, 54);
+            panel4.Controls.Add(Kilometers);
+            panel4.Controls.Add(kilometersEdit);
+            panel4.Location = new Point(12, 62);
+            panel4.Name = "panel4";
+            panel4.Size = new Size(239, 163);
+            panel4.TabIndex = 54;
+            // 
+            // panel3
+            // 
+            panel3.BackColor = Color.FromArgb(59, 66, 87);
+            panel3.Location = new Point(11, 61);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(241, 165);
+            panel3.TabIndex = 53;
             // 
             // FileEditorForm
             // 
@@ -275,8 +296,6 @@
             BackColor = Color.FromArgb(35, 40, 54);
             ClientSize = new Size(547, 333);
             Controls.Add(ownerSelect);
-            Controls.Add(kilometersEdit);
-            Controls.Add(Kilometers);
             Controls.Add(Model);
             Controls.Add(Owner);
             Controls.Add(btnNext);
@@ -289,6 +308,8 @@
             Controls.Add(TextEditBox);
             Controls.Add(btnConfirm);
             Controls.Add(btnCancel);
+            Controls.Add(panel4);
+            Controls.Add(panel3);
             ForeColor = Color.White;
             FormBorderStyle = FormBorderStyle.None;
             Icon = (Icon)resources.GetObject("$this.Icon");
@@ -304,6 +325,8 @@
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)kilometersEdit).EndInit();
+            panel4.ResumeLayout(false);
+            panel4.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
 
@@ -329,5 +352,7 @@
         private Label PanelText;
         private NumericUpDown kilometersEdit;
         private FlatComboExample.Net.FlatComboBox ownerSelect;
+        private Panel panel4;
+        private Panel panel3;
     }
 }
